@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Solution4Future/crypto-allauth.svg?branch=master)](https://travis-ci.org/Solution4Future/crypto-allauth)
 
-(DISCLAMER! This software is early alpha and doesn't have tests yet so you are using it on your own)
+(DISCLAIMER! This software is early alpha and doesn't have tests yet so you are using it on your own)
 
 Crypto-allauth is a library that adds support for some advanced login methods.
 It was first drafted at the TREZOR 2 Hackathon in Prague.
