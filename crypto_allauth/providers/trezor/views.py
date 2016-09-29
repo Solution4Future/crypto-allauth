@@ -10,7 +10,6 @@ import bitcoin
 from allauth.socialaccount import providers
 from allauth.socialaccount.helpers import render_authentication_error, complete_social_login
 from allauth.socialaccount.models import SocialLogin
-from django.http import HttpResponse
 from django.urls import reverse
 from django.utils.encoding import force_bytes
 

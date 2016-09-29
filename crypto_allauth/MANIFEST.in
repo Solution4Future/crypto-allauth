@@ -1,0 +1,3 @@
+include LICENSE
+include README.rst
+recursive-include crypto_allauth/providers *.html *.js
