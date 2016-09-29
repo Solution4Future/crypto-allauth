@@ -36,9 +36,6 @@ function trezorLoginCallback(result) {
             "signature": result.signature,
             "version": 2
         });
-        console.log('Public key:', result.public_key); // pubkey in hex
-        console.log('Signature:', result.signature); // signature in hex
-        console.log('Version 2:', result.version === 2); // version field
     } else {
         console.error('Error:', result.error);
     }
