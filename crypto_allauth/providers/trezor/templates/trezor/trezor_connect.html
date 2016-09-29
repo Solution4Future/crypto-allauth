@@ -1,0 +1,53 @@
+{% load staticfiles %}
+
+<div id="trezor-root"></div>
+
+<script>
+function post(path, params, method) {
+    method = method || "post"; // Set method to post by default if not specified.
+
+    // The rest of this code assumes you are not using a library.
+    // It can be made less wordy if you use one.
+    var form = document.createElement("form");
+    form.setAttribute("method", method);
+    form.setAttribute("action", path);
+
+    for(var key in params) {
+        if(params.hasOwnProperty(key)) {
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", key);
+            hiddenField.setAttribute("value", params[key]);
+
+            form.appendChild(hiddenField);
+         }
+    }
+
+    document.body.appendChild(form);
+    form.submit();
+}
+
+
+
+function trezorLoginCallback(result) {
+    if (result.success) {
+        post("{{callback}}", {
+            "public_key": result.public_key,
+            "signature": result.signature,
+            "version": 2
+        });
+        console.log('Public key:', result.public_key); // pubkey in hex
+        console.log('Signature:', result.signature); // signature in hex
+        console.log('Version 2:', result.version === 2); // version field
+    } else {
+        console.error('Error:', result.error);
+    }
+}
+</script>
+<trezor:login callback="trezorLoginCallback"
+              challenge_hidden="{{trezor_data.challenge_hidden}}"
+              challenge_visual="{{trezor_data.challenge_visual}}"
+              text="Sign in with TREZOR"
+              icon="{% static 'trezor/img/trezor_button.png' %}"></trezor:login>
+
+<script src="{% static 'trezor/js/connect.js' %}"></script>
