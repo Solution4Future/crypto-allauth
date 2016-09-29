@@ -2,7 +2,11 @@ language: python
 python:
   - "3.4"
   - "3.5"
+env:
+  - DJANGO_VERSION=1.8.15
+  - DJANGO_VERSION=1.9.10
+  - DJANGO_VERSION=1.10.1
 # command to install dependencies
-install: "pip install pytest pytest-django && python setup.py develop"
+install: "pip install --upgrade pytest pytest-django django=$DJANGO_VERSION"
 # command to run tests
 script: pytest
