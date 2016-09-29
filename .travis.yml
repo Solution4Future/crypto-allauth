@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.4"
+  - "3.5"
+# command to install dependencies
+install: "pip install pytest pytest-django && python setup.py develop"
+# command to run tests
+script: pytest
