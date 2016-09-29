@@ -95,14 +95,14 @@ long_description = io.open('README.md', encoding='utf-8').read()
 
 METADATA = dict(
     name='crypto-allauth',
-    version='0.0.3',
+    version='0.0.4',
     include_package_data=True,
     long_description=long_description,
     url='https://github.com/Solution4Future/crypto-allauth',
     license='MIT',
     author='Dominik Kozaczko',
     author_email='crypto-allauth@kozaczko.info',
-    description='Allauth plugin to use cryptographic tools like Trezor',
+    description='Plugin for django-allauth that allows authentication using cryptographic tools like Trezor.',
     install_requires=['bitcoin>=1.1.42', 'django-allauth>=0.27.0'],
     zip_safe=False,
 
