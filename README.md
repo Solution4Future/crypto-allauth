@@ -32,3 +32,8 @@ And you're all set up.
 
 For the "Login with TREZOR" button to work properly you either need a Chrome plugin or a trezor-bridge daemon. Go to [satoshilabs.com/trezor](http://satoshilabs.com/trezor/) to learn more.
 
+## Roadmap
+
+- U2F support (Yubikey and others)
+- Offline Trezor support
+- Keybase support
