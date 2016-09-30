@@ -37,3 +37,9 @@ For the "Login with TREZOR" button to work properly you either need a Chrome plu
 - U2F support (Yubikey and others)
 - Offline Trezor support
 - Keybase support
+
+## Final notes
+
+Feel free to create pull requests.
+
+If you feel generous you can donate: 1AnrshDKmzRU57GTNJ2ki1bTKK45NDd2Dn
