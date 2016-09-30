@@ -1,8 +1,7 @@
 # Welcome to crypto-allauth
 
-[![Join the chat at https://gitter.im/solution4future/crypto-allauth](https://badges.gitter.im/solution4future/crypto-allauth.svg)](https://gitter.im/solution4future/crypto-allauth?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 [![Build Status](https://travis-ci.org/Solution4Future/crypto-allauth.svg?branch=master)](https://travis-ci.org/Solution4Future/crypto-allauth)
+[![Join the chat at https://gitter.im/solution4future/crypto-allauth](https://badges.gitter.im/solution4future/crypto-allauth.svg)](https://gitter.im/solution4future/crypto-allauth?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 (DISCLAIMER! This software is early alpha and doesn't have tests yet so you are using it on your own)
 
