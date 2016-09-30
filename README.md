@@ -42,4 +42,4 @@ For the "Login with TREZOR" button to work properly you either need a Chrome plu
 
 Feel free to create pull requests.
 
-If you feel generous you can donate: 1AnrshDKmzRU57GTNJ2ki1bTKK45NDd2Dn
+If you feel generous you can donate: [1AnrshDKmzRU57GTNJ2ki1bTKK45NDd2Dn](http://i.imgur.com/hlhWwOO.png)
