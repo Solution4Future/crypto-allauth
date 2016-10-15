@@ -12,4 +12,4 @@ env:
 install: "pip install tox"
 # command to run tests
 script:
-- tox -e py${TRAVIS_PYTHON_VERSION//[.]/}-$DJANGO
+- tox -e py${TRAVIS_PYTHON_VERSION//[.]/}-$DJANGO_VERSION
