@@ -1,0 +1,15 @@
+Changelog
+=========
+
+
+0.0.5 (in development)
+----------------------
+
+#. Test infrastracture (tox + TravisCI)
+#. Added support for Django 1.8.x
+#. PEP8 fixes
+
+0.0.4
+-----
+#. Initial version after Trezor Hackathon
+

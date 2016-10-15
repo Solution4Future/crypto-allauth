@@ -10,10 +10,12 @@ import bitcoin
 from allauth.socialaccount import providers
 from allauth.socialaccount.helpers import render_authentication_error, complete_social_login
 from allauth.socialaccount.models import SocialLogin
-from django.urls import reverse
+try:
+    from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
 from django.utils.encoding import force_bytes
-
-from django.views.generic import View, TemplateView
+from django.views.generic import TemplateView
 
 from .provider import TrezorProvider
 
@@ -52,12 +54,18 @@ class TrezorLoginView(TemplateView):
             'version': request.POST.get('version'),
         }
 
-        is_ok = verify(trezor_data['challenge_hidden'], force_bytes(trezor_data['challenge_visual']),
-                       extra_data['public_key'], extra_data['signature'], extra_data['version'])
+        is_ok = verify(trezor_data['challenge_hidden'],
+                       force_bytes(trezor_data['challenge_visual']),
+                       extra_data['public_key'],
+                       extra_data['signature'],
+                       extra_data['version'])
 
         if not is_ok:
             return render_authentication_error(request, provider_id=TrezorProvider.id)
 
-        login = providers.registry.by_id(TrezorProvider.id, request).sociallogin_from_response(request, extra_data)
+        login = providers.registry.\
+            by_id(TrezorProvider.id, request).\
+            sociallogin_from_response(request, extra_data)
+
         login.state = SocialLogin.state_from_request(request)
         return complete_social_login(request, login)
