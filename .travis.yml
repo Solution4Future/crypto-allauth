@@ -1,12 +1,15 @@
 language: python
 python:
-  - "3.4"
-  - "3.5"
+  - '2.7'
+  - '3.4'
+  - '3.5'
 env:
   - DJANGO_VERSION=1.8.15
   - DJANGO_VERSION=1.9.10
   - DJANGO_VERSION=1.10.1
+  - DJANGO_VERSION=master
 # command to install dependencies
-install: "pip install --upgrade pytest pytest-django django==$DJANGO_VERSION"
+install: "pip install tox"
 # command to run tests
-script: pytest
+script:
+- tox -e py${TRAVIS_PYTHON_VERSION//[.]/}-$DJANGO
