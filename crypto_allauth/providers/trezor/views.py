@@ -10,10 +10,12 @@ import bitcoin
 from allauth.socialaccount import providers
 from allauth.socialaccount.helpers import render_authentication_error, complete_social_login
 from allauth.socialaccount.models import SocialLogin
-from django.urls import reverse
+try:
+    from django.urls import reverse
+except ImportError:
+    from django.core.urlresolvers import reverse
 from django.utils.encoding import force_bytes
-
-from django.views.generic import View, TemplateView
+from django.views.generic import TemplateView
 
 from .provider import TrezorProvider
 
