@@ -42,5 +42,4 @@ class TrezorProvider(Provider):
         return reverse("trezor_login")
 
 
-
 providers.registry.register(TrezorProvider)

@@ -1,9 +1,7 @@
 import hmac
 import hashlib
-import six
 
 from django.utils.encoding import force_bytes
-
 
 
 def hmac_sha512(key, message):

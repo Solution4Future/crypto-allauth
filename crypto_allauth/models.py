@@ -8,4 +8,3 @@ from django.utils.translation import ugettext_lazy as _
 @python_2_unicode_compatible
 class CryptoApp(models.Model):
     name = models.CharField(_('name'), max_length=40)
-
