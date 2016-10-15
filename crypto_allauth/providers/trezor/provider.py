@@ -1,21 +1,6 @@
-import hashlib
-import json
-import uuid
-
-import datetime
-
-from allauth.compat import render_to_string
-from django.utils.safestring import mark_safe
-
-try:
-    from urllib.parse import urlparse
-except ImportError:
-    from urlparse import urlparse
-from django.core.urlresolvers import reverse
-from django.utils.http import urlencode
-
 from allauth.socialaccount import providers
 from allauth.socialaccount.providers.base import Provider, ProviderAccount
+from django.core.urlresolvers import reverse
 
 
 class TrezorAccount(ProviderAccount):

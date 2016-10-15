@@ -28,3 +28,5 @@ INSTALLED_APPS = [
     'crypto_allauth.providers.trezor',
 
 ]
+
+ROOT_URLCONF = 'crypto_allauth.providers.trezor.urls'
