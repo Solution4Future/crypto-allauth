@@ -4,9 +4,9 @@ python:
   - '3.4'
   - '3.5'
 env:
-  - DJANGO_VERSION=1.8.15
-  - DJANGO_VERSION=1.9.10
-  - DJANGO_VERSION=1.10.1
+  - DJANGO_VERSION=1.8.x
+  - DJANGO_VERSION=1.9.x
+  - DJANGO_VERSION=1.10.x
   - DJANGO_VERSION=master
 # command to install dependencies
 install: "pip install tox"
